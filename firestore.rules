@@ -1,0 +1,40 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // Submissions collection
+    match /submissions/{submissionId} {
+      // Anyone can read submissions
+      allow read: if true;
+      // Only authenticated users can create submissions
+      allow create: if isAuthenticated();
+      // Only admins can update or delete submissions
+      allow update, delete: if isAdmin();
+    }
+
+    // Users collection
+    match /users/{userId} {
+      // Users can read their own data
+      allow read: if isAuthenticated() && (request.auth.uid == userId || isAdmin());
+      // Only admins can create, update, or delete users
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Posts collection
+    match /posts/{postId} {
+      // Anyone can read published posts
+      allow read: if true;
+      // Only admins can create, update, or delete posts
+      allow create, update, delete: if isAdmin();
+    }
+  }
+} 

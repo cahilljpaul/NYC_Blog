@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SoundScape - Your Ultimate Music Discovery Platform">
+    <title>SoundScape | Where Music Lives</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>SoundScape</h1>
+                <span class="tagline">Where Music Lives</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#contribute">Contribute</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to SoundScape</h2>
+            <p>Your platform for sharing musical experiences and discoveries</p>
+        </section>
+
+        <section id="featured" class="featured-content">
+            <h2>Featured Articles</h2>
+            <div class="article-grid">
+                <article class="featured-article">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Music Festival">
+                    <h3>The Evolution of Music Festivals</h3>
+                    <p>Exploring how music festivals have transformed the live music experience...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+                <article class="featured-article">
+                    <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Vinyl Records">
+                    <h3>Vinyl Revival: Why Records Are Making a Big Comeback</h3>
+                    <p>Discover why vinyl records are experiencing a renaissance in the digital age...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contribute" class="contribute-section">
+            <h2>Share Your Musical Journey</h2>
+            <div class="contribute-form">
+                <form id="contribution-form">
+                    <div class="form-group">
+                        <label for="author-name">Your Name</label>
+                        <input type="text" id="author-name" name="author-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="author-email">Your Email</label>
+                        <input type="email" id="author-email" name="author-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                            <option value="review">Album Review</option>
+                            <option value="article">Music Article</option>
+                            <option value="interview">Artist Interview</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Your Content</label>
+                        <textarea id="content" name="content" rows="10" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="image-url">Image URL (optional)</label>
+                        <input type="url" id="image-url" name="image-url" placeholder="https://example.com/image.jpg">
+                    </div>
+                    <div class="form-note">
+                        <p><i class="fas fa-info-circle"></i> All submissions will be reviewed by our editorial team before publication.</p>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit for Review</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="latest-reviews" class="latest-reviews">
+            <h2>Latest Reviews</h2>
+            <div class="reviews-grid">
+                <!-- Reviews will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About SoundScape</h3>
+                <p>Your platform for sharing musical experiences and discoveries</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@soundscape.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SoundScape. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
